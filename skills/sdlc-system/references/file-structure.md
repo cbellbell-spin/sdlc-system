@@ -30,6 +30,7 @@ initiatives/[slug]/
   _state.md
   _metric_registry.md
   _gate_log.md
+  decisions.md
   01_opportunity_brief.md
   02_validated_opportunity_brief.md
   03_product_brief.md
@@ -133,3 +134,25 @@ Written once at the end of Phase 2A approval. Read-only after that point.
 | Gate 2C | | [Timeline, release strategy] | | |
 | Gate 3 | | Launch (Full) / Launch (Conditional) / Delay | | |
 ```
+
+---
+
+## `decisions.md` Schema
+
+Written at initiative creation (empty header row only). Appended at the end of every session where a notable decision was made. Append-only — never edit or delete prior entries.
+
+```markdown
+# Decisions Log: [Initiative Name]
+
+| # | Date | Phase | Decision | Alternatives considered | Rationale |
+|---|------|-------|----------|------------------------|-----------|
+```
+
+**What belongs here:** Calls that shaped the work but aren't captured in the artifact itself — a scope item cut and why, a metric definition chosen over alternatives, a framing selected, a signal discarded with reason. Not process events (gate decisions go in `_gate_log.md`) and not state (that goes in `_state.md`).
+
+**Entry guide:**
+- `Decision` — the call made, stated plainly (e.g., "Cut SSO from v1 scope")
+- `Alternatives considered` — what else was live before the call was made
+- `Rationale` — why this call, not the alternatives (e.g., "Engineering estimate was 6 weeks; not justified by validated demand signal")
+
+**The test:** Can a new session, reading only the project files, avoid re-litigating this decision? If yes, the entry is doing its job.

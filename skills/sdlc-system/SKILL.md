@@ -40,8 +40,8 @@ Run this at the start of every session before doing anything else:
 1. Read `_portfolio_registry.md` at the root of the shared folder. If it does not exist, create it (header row only) and note the portfolio is empty.
 2. Show the PM a brief portfolio table: initiative name, named PM, current phase, status.
 3. Ask: which initiative to work on, or start a new one?
-4. **Resuming:** Read `_state.md` for the selected initiative. Brief the PM in 3-5 bullets: current phase, last artifact touched, what is pending from the PM, any open flags. Then ask: "Ready to pick up there, or do you want to go somewhere else first?"
-5. **New initiative:** Ask for initiative name, slug (kebab-case), and named PM. Create the subfolder structure per `references/file-structure.md`. Add to `_portfolio_registry.md`. Ask whether to start at Phase 0 (triage) or move directly to Phase 1A (Opportunity Brief).
+4. **Resuming:** Read `_state.md` and `decisions.md` for the selected initiative. Brief the PM in 3-5 bullets: current phase, last artifact touched, what is pending from the PM, any open flags. Then ask: "Ready to pick up there, or do you want to go somewhere else first?"
+5. **New initiative:** Ask for initiative name, slug (kebab-case), and named PM. Create the subfolder structure per `references/file-structure.md` — including an empty `decisions.md` with the header row only. Add to `_portfolio_registry.md`. Ask whether to start at Phase 0 (triage) or move directly to Phase 1A (Opportunity Brief).
 
 ## Cross-Cutting Capabilities
 
@@ -84,9 +84,10 @@ Universal phase pattern:
 
 At every natural stopping point or when the PM signals they are done:
 
-1. Draft the updated `_state.md` entry. Show it to the PM: "Before we close, here is what I am recording. Anything to add or correct?"
-2. After confirmation, write `_state.md`.
-3. If phase or status changed, update `_portfolio_registry.md`.
+1. **Decisions deposit.** Scan this session's conversation for calls that shaped the work — scope choices, metric definitions, framings selected, signals discarded, alternatives explicitly rejected. Propose them as `decisions.md` entries in table format. Show the PM: "Here are the decisions worth logging from this session. Confirm, edit, or drop any before I write them." After confirmation, append to `decisions.md`. If no notable decisions were made, say so explicitly and skip the append.
+2. Draft the updated `_state.md` entry. Show it to the PM: "Before we close, here is what I am recording. Anything to add or correct?"
+3. After confirmation, write `_state.md`.
+4. If phase or status changed, update `_portfolio_registry.md`.
 
 State file must include: initiative name, named PM, last-updated date, current phase and gate status, completed artifacts, in-progress artifact, pending PM actions (specific), open questions, flags, and context notes (things the PM mentioned that are not in any artifact but matter for continuity).
 
