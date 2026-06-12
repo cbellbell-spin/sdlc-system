@@ -32,6 +32,15 @@ Create the initiative entry in `_portfolio_registry.md` and the subfolder struct
 **Classification:** H/a — PM does the thinking; agent provides structure, prompts, and quality checks.
 **File:** `01_opportunity_brief.md`
 
+**Cross-Plugin Read:**
+
+Before starting Section 1, check `~/Documents/pm-coach/customer-context/` for an existing profile matching the segment in play:
+- If a profile exists: surface it. *"I see you have a customer-context profile for `<segment>` (last updated YYYY-MM-DD). The key signals are: [summary]. Are those still the inputs to this Opportunity Brief, or has the picture changed?"* The profile is reference material, not a substitute for the work in this phase.
+- If the segment is named but no profile exists: suggest capturing context first via `product-ic-coach` `customer-understanding` before drafting. *"There's no customer-context profile for `<segment>` yet. Want to capture what we know about them via `product-ic-coach` `customer-understanding` first, or proceed and we'll build it inline here?"*
+- Also check `~/Documents/pm-coach/problems/` for any in-flight problem statement this initiative continues. If one matches, link it.
+
+Record any cross-plugin anchors in `_state.md` under "Customer-context anchors" (see `references/file-structure.md`).
+
 Work through each section with the PM. Do not write answers on the PM's behalf for H/a sections.
 
 **Section 1 — Problem Hypothesis:**

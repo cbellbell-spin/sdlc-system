@@ -7,13 +7,15 @@ Ask the PM for:
 2. Slug (kebab-case, lowercase — this becomes the folder name under `initiatives/`)
 3. Named PM for this initiative
 
+Also ask: "Is there an existing customer-context profile or problem statement in `~/Documents/pm-coach/` (the `product-ic-coach` repository) that anchors this initiative? If yes, give me the path(s) and I'll link them as Customer-context anchors in `_state.md`."
+
 Then ask: "Do you want to start with Phase 0 triage (scoring this idea against the portfolio before investing in a full Opportunity Brief), or go directly to Phase 1A (Opportunity Brief)?"
 
 Create the initiative subfolder:
 
 ```
 initiatives/[slug]/
-  _state.md          — initialize with phase set to the selected starting phase, status: Active, Named PM recorded
+  _state.md          — initialize with phase set to the selected starting phase, status: Active, Named PM recorded, and Customer-context anchors populated if provided
   _metric_registry.md — initialize with header only — not populated until Phase 2A
   _gate_log.md       — initialize with header and empty rows for all six gates
 ```

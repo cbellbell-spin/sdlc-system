@@ -54,7 +54,7 @@ Guides PMs through a structured Stage-Gate product development system — from i
 
 ## Integration Points
 
-Works without any integrations. Manual fallback templates in `skills/product-dev-system/references/integration-stubs.md` produce the same structured output. Priority order for connecting integrations:
+Works without any integrations. Manual fallback templates in `skills/sdlc-system/references/integration-stubs.md` produce the same structured output. Priority order for connecting integrations:
 
 1. Analytics / telemetry (Phases 5/6 signal reports)
 2. CRM / signal sources (Phases 1A/1B signal aggregation)

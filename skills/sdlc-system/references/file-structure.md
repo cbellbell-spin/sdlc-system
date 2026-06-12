@@ -1,5 +1,34 @@
 # File Structure Reference
 
+## External Inputs (Read-Only)
+
+The SDLC system reads from `~/Documents/pm-coach/` (the `product-ic-coach` repository) as an input source. This is **read-only** from the SDLC's perspective — the IC coach owns the canonical files.
+
+```
+~/Documents/pm-coach/
+├── customer-context/
+│   └── <segment-or-account-slug>/
+│       ├── profile.md          # canonical, revised in-place
+│       └── log.md              # append-only
+├── problems/
+│   └── <problem-slug>/
+│       ├── problem-statement.md
+│       ├── notes.md
+│       └── links.md
+└── prioritization/
+    └── <yyyy-mm-dd>-<context>/
+        └── snapshot.md
+```
+
+**Contract:** The IC coach's `customer-understanding` `profile.md` and `problem-statement.md` formats are the stable contract the SDLC reads from. Section headers are not just markdown for humans — they're the API the SDLC parses.
+
+**When the SDLC references these inputs:**
+- The Opportunity Brief (Phase 1A) reads `customer-context/<slug>/profile.md` to inform the problem hypothesis. See `references/phase-behavior.md` for the "Cross-Plugin Read" block.
+- The PM's `_state.md` records the input paths under "Customer-context anchors" (see schema below).
+- The SDLC does NOT copy, edit, or restate content from `~/Documents/pm-coach/` inline. It links.
+
+---
+
 ## Portfolio Level (Shared Folder Root)
 
 ### `_portfolio_registry.md`
@@ -70,6 +99,13 @@ Written at the end of every session. The agent's working memory across sessions.
 
 ## Completed Artifacts
 - [01_opportunity_brief.md — Approved Gate 1A YYYY-MM-DD]
+
+## Customer-context anchors
+Links to artifacts in `~/Documents/pm-coach/` (the `product-ic-coach` repository) that informed this initiative. These are **inputs**, not outputs. The initiative may have evolved beyond them; reference for lineage, but the canonical artifact is in `initiatives/<slug>/`.
+- Customer context: `customer-context/<slug>/profile.md`
+- Problem statement: `problems/<slug>/problem-statement.md`
+- Prioritization snapshot: `prioritization/<date>-<context>/snapshot.md`
+- Other: <free-form paths>
 
 ## In Progress
 [What was actively being worked on at session end — artifact name and specific section]

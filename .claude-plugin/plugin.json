@@ -1,6 +1,6 @@
 {
   "name": "sdlc-system",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Stage-Gate product development system. Guides PMs through 8 phases and 6 gates — from opportunity brief through post-launch operating decisions. Drafts artifacts, enforces system rules, tracks initiative state, and prepares gate-ready outputs.",
   "author": {
     "name": "Chris J. Bell"

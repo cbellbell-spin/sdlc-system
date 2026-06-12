@@ -1,5 +1,5 @@
 ---
-name: product-dev-system
+name: sdlc-system
 description: >
   Stage-Gate product development system. Load this skill when:
   - User mentions an Opportunity Brief, Validated Opportunity Brief, Product Brief, PRD, signal report, decision brief, or operating review
